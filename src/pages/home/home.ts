@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AuthenticationService } from '../../services/authentication.service';
 
+declare var goocalapi: any;
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -12,6 +13,10 @@ export class HomePage {
               private authService: AuthenticationService) {
 
   }
+
+  // ionViewDidLoad(){
+  //   goocalapi.handleClientLoad();
+  // }
 
   login(){
     this.authService.login()
@@ -25,8 +30,8 @@ export class HomePage {
       })
   }
 
-  getToken(){
-    this.authService.myPost();
+  // getToken(){
+  //   this.authService.myPost();
     
-  }
+  // }
 }
