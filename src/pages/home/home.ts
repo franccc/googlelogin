@@ -30,9 +30,9 @@ export class HomePage {
       alert("Paso1")
       firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
       .then(suc => {
-        alert("Login succ")
+        alert("Login con exito !!!")
       }).catch(ns => {
-        alert("Not succ")
+        alert("No se pudo ingresar")
       })
     })
   }
